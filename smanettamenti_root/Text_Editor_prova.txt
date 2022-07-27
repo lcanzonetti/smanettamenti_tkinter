@@ -1,0 +1,1 @@
+Ciao mi chiamo Lorenzo e sto imparando ad usare Tkinter per realizzare semplici interfacce e programmini carini.
