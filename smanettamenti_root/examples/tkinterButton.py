@@ -1,15 +1,22 @@
 import tkinter as tk
 
+numberOfButtons = 20
+
 window = tk.Tk()
 
-button = tk.Button(
-    text = "Click me!",
-    width = 25,
-    height = 5,
-    bg = "red",
-    fg = "green"
-)
+gattino = tk.PhotoImage(file='./smanettamenti_root/examples/auora.png')
 
-button.pack()
+for i in range(numberOfButtons):
+    button_i = tk.Button(
+        text = "Click me!",
+        width = 300,
+        height = 200,
+        bg = "red",
+        fg = "green",
+        image=gattino
+    )
+    button_i.pack()
+
+
 
 window.mainloop()
