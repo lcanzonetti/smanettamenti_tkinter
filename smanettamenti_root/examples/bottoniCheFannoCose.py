@@ -7,9 +7,13 @@ import os
 PATH = os.path.dirname(os.path.realpath(__file__))
 print(PATH)
 
-window = tk.Tk()
+window = ctk.CTk()
 
-gattino = tk.PhotoImage(file = PATH + '/auora.png')
+#Images
+
+gattino = ctk.CTkImage(light_image=Image.open(PATH + "/aurora.png"), 
+                       dark_image=Image.open(PATH + "/aurora.png"),
+                       size=(50,50))
 
 def command():
     showinfo(title = 'Information', message = 'Ciao! Un tasto è stato premuto!')
@@ -24,11 +28,14 @@ for i in range(2):
         frame_ij.grid(row=i, column=j, padx=50, pady=50)
         button = ctk.CTkButton(
                                 master = frame_ij, 
-                                text   = None,
+                                text   = "Premimi!!!",
+                                width=120,
+                                height=120,
                                 corner_radius = 12,
                                 # compound = "top",
                                 command = lambda: command(),
-                                image = gattino
+                                image = gattino,
+                                compound="left"
                                 )
         button.pack()
 
